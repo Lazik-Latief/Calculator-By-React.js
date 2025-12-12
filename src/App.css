@@ -1,0 +1,142 @@
+/* Center the calculator on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e1e;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main box */
+.calculator {
+  width: 320px;
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Display screen */
+.display {
+  background: #000;
+  color: #0f0;
+  padding: 15px;
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 50px;
+}
+
+/* Grid layout for buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons design */
+button {
+  font-size: 1.5rem;
+  padding: 15px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* Operator buttons */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16),
+button:nth-child(15) {
+  background: #ff8c00;
+}
+
+button:nth-child(4):hover,
+button:nth-child(8):hover,
+button:nth-child(12):hover,
+button:nth-child(16):hover,
+button:nth-child(15):hover {
+  background: #ffa733;
+}
+
+/* Clear button big */
+.clear {
+  grid-column: span 4;
+  background: #e63946;
+}
+
+.clear:hover {
+  background: #ff4d5a;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: #555;
+  color: white;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: #777;
+}
+
+/* LIGHT THEME */
+.calculator.light {
+  background: #f4f4f4;
+}
+
+.calculator.light .display {
+  background: white;
+  color: black;
+}
+
+.calculator.light button {
+  background: #e0e0e0;
+  color: black;
+}
+
+.calculator.light button:hover {
+  background: #d5d5d5;
+}
+
+.calculator.light .clear {
+  background: #ff6b6b;
+}
+
+.calculator.light .clear:hover {
+  background: #ff8585;
+}
+
+.calculator.light button:nth-child(4),
+.calculator.light button:nth-child(8),
+.calculator.light button:nth-child(12),
+.calculator.light button:nth-child(16),
+.calculator.light button:nth-child(15) {
+  background: #ffb703;
+}
+
+.calculator.light button:nth-child(4):hover,
+.calculator.light button:nth-child(8):hover,
+.calculator.light button:nth-child(12):hover,
+.calculator.light button:nth-child(16):hover,
+.calculator.light button:nth-child(15):hover {
+  background: #ffc533;
+}
